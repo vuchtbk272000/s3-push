@@ -31,6 +31,8 @@ jobs:
           echo Hello, world!
           export VAR=1
           echo $VAR
+    outputs:
+      res: 1
 
   job2:
     needs: build
@@ -38,4 +40,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: echo 1
-        run: echo $VAR
+        run: echo needs.build.outputs.res
