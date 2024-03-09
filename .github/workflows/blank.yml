@@ -27,7 +27,9 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo Hello, world!
+        run: | 
+          echo Hello, world!
+          export VAR=1
 
   job2:
     needs: build
@@ -35,4 +37,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: echo 1
-        run: echo 1
+        run: echo $VAR
