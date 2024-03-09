@@ -30,6 +30,7 @@ jobs:
         run: | 
           echo Hello, world!
           export VAR=1
+          echo $VAR
 
   job2:
     needs: build
