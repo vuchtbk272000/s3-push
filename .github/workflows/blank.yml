@@ -40,4 +40,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: echo 1
-        run: echo needs.build.outputs.res
+        run: echo ${{ needs.build.outputs.res }}
