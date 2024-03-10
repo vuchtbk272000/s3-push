@@ -32,7 +32,7 @@ jobs:
           export VAR=1
           echo $VAR
     outputs:
-      res: 1
+      res: $VAR
 
   job2:
     needs: build
