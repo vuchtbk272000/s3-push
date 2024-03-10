@@ -30,7 +30,7 @@ jobs:
         id: status
         run: | 
           echo Hello, world!
-          export VAR=1
+          export VAR=$(ls -la)
           echo $VAR
           echo "::set-output name=status::${VAR}"
     outputs:
